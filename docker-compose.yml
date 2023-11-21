@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  tftp:
+    container_name: tftp
+    image: polinux/tftp:latest
+    restart: unless-stopped
+    ports:
+      - "69:69/udp"
+    volumes:
+      - ./data:/data
